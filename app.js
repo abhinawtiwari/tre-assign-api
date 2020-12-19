@@ -9,9 +9,13 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Import Routes
-const postsRoute = require('./routes/posts');
+const pricesRoute = require('./routes/prices');
+const fruitsRoute = require('./routes/fruits');
+const feedsRoute = require('./routes/feeds');
 
-app.use('/posts', postsRoute);
+app.use('/prices', pricesRoute);
+app.use('/fruits', fruitsRoute);
+app.use('/feeds', feedsRoute);
 
 // Routes
 app.get("/", (req, res) => {
